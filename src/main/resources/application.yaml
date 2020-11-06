@@ -1,0 +1,6 @@
+server:
+  port: 8089
+
+logging:
+  file:
+    name: /log/problem.log

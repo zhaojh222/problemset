@@ -1,0 +1,21 @@
+2020-08-26 16:03:23.686  INFO 25256 --- [main] c.z.l.p.ProblemsetApplicationTests       : Starting ProblemsetApplicationTests on m-c02x60lejgh7 with PID 25256 (started by vn0nq7o in /Users/vn0nq7o/workspaces/zhaojh222/problemset)
+2020-08-26 16:03:23.687  INFO 25256 --- [main] c.z.l.p.ProblemsetApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-26 16:03:25.145  INFO 25256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-26 16:03:25.505  INFO 25256 --- [main] c.z.l.p.ProblemsetApplicationTests       : Started ProblemsetApplicationTests in 2.068 seconds (JVM running for 2.841)
+2020-08-26 16:03:25.736  INFO 25256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-26 16:05:09.403  INFO 25279 --- [main] c.z.l.p.ProblemsetApplicationTests       : Starting ProblemsetApplicationTests on m-c02x60lejgh7 with PID 25279 (started by vn0nq7o in /Users/vn0nq7o/workspaces/zhaojh222/problemset)
+2020-08-26 16:05:09.404  INFO 25279 --- [main] c.z.l.p.ProblemsetApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-26 16:05:10.830  INFO 25279 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-26 16:05:11.156  INFO 25279 --- [main] c.z.l.p.ProblemsetApplicationTests       : Started ProblemsetApplicationTests in 1.971 seconds (JVM running for 2.704)
+2020-08-26 16:05:11.357  INFO 25279 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-26 16:05:32.374  INFO 25284 --- [main] c.z.lc.problemset.ProblemsetApplication  : Starting ProblemsetApplication on m-c02x60lejgh7 with PID 25284 (/Users/vn0nq7o/workspaces/zhaojh222/problemset/target/classes started by vn0nq7o in /Users/vn0nq7o/workspaces/zhaojh222/problemset)
+2020-08-26 16:05:32.376  INFO 25284 --- [main] c.z.lc.problemset.ProblemsetApplication  : No active profile set, falling back to default profiles: default
+2020-08-26 16:05:33.116  INFO 25284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2020-08-26 16:05:33.122  INFO 25284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-26 16:05:33.122  INFO 25284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-26 16:05:33.189  INFO 25284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-26 16:05:33.190  INFO 25284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 784 ms
+2020-08-26 16:05:33.648  INFO 25284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-26 16:05:34.003  INFO 25284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path ''
+2020-08-26 16:05:34.013  INFO 25284 --- [main] c.z.lc.problemset.ProblemsetApplication  : Started ProblemsetApplication in 1.892 seconds (JVM running for 2.305)
+2020-08-26 16:07:32.521  INFO 25284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
