@@ -53,9 +53,9 @@ public class TwoSum {
             if (tmpSum == target) {
                 return new int[]{start, end};
             } else if (tmpSum > target) {
-                end = (start + end) / 2;
+                end--;
             } else {
-                start = (start + end) / 2;
+                start++;
             }
         }
         return new int[]{};

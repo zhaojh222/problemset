@@ -1,12 +1,9 @@
 package com.zjh.lc.problemset.easy;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
 public class TwoSumTest {
 
     private TwoSum twoSum = new TwoSum();
@@ -23,10 +20,10 @@ public class TwoSumTest {
 
     @Test
     public void twoSumSorted() {
-        int[] nums = new int[]{2, 3, 5, 6, 8};
-        int target = 11;
+        int[] nums = new int[]{2, 3, 5, 7, 8};
+        int target = 9;
         int[] result = twoSum.twoSumSorted(nums, target);
-        assertEquals(2, result[0]);
+        assertEquals(0, result[0]);
         assertEquals(3, result[1]);
     }
 }
