@@ -2,6 +2,8 @@ package com.zjh.lc.problemset.easy;
 
 import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
+
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -27,6 +29,7 @@ public class LongestCommonPrefix {
             }
             stringBuilder.append(c);
         }
+
         return stringBuilder.toString();
     }
 }
