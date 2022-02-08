@@ -2,7 +2,7 @@ package com.zjh.lc.problemset.others;
 
 import com.zjh.lc.problemset.common.Node;
 
-public class SwapPairs {
+public class NodeOperator {
 
     public Node swapNodeValues(Node node) {
         Node currentNode = node;
@@ -22,5 +22,18 @@ public class SwapPairs {
             System.out.println(pos.getValue());
             pos = pos.getNext();
         }
+    }
+
+    public Node reverseNode(Node node) {
+
+        Node head = node;
+        Node pos = node;
+        Node next = null;
+        while(pos != null && (next = pos.getNext())!=null) {
+            pos.setNext(next.getNext());
+            next.setNext(head);
+            head = next;
+        }
+        return head;
     }
 }
