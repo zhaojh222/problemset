@@ -9,25 +9,26 @@ public class NodeOperatorTest {
 
     @Test
     void swapNodeValues() {
-        Node node5 = new Node(5);
-        Node node4 = new Node(4,node5);
-        Node node3 = new Node(3, node4);
-        Node node2 = new Node(2, node3);
-        Node node1 = new Node(1, node2);
-
-        nodeOperator.swapNodeValues(node1);
-        nodeOperator.outputNode(node1);
+        Node node = createNode();
+        nodeOperator.swapNodeValues(node);
+        nodeOperator.outputNode(node);
     }
 
     @Test
     public void testReverseNode() {
-        Node node5 = new Node(5);
-        Node node4 = new Node(4,node5);
+        Node node = createNode();
+        Node reverseNode = nodeOperator.reverseNode(node);
+        nodeOperator.outputNode(reverseNode);
+    }
+
+    private Node createNode() {
+        Node node6 = new Node(6);
+        Node node5 = new Node(5, node6);
+        Node node4 = new Node(4, node5);
         Node node3 = new Node(3, node4);
         Node node2 = new Node(2, node3);
         Node node1 = new Node(1, node2);
 
-        Node reverseNode = nodeOperator.reverseNode(node1);
-        nodeOperator.outputNode(reverseNode);
+        return node1;
     }
 }
