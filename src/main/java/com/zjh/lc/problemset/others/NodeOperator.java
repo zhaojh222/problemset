@@ -36,4 +36,29 @@ public class NodeOperator {
         }
         return head;
     }
+
+    public Node removeNthEndNode(Node node, int n) {
+        boolean outOfRange = false;
+        if(node == null) return null;
+        if(n <= 0) return node;
+        Node head = node;
+        Node fast = head, slow = head;
+        while(n-- > 0) {
+            fast = fast.getNext();
+            if (fast == null) {
+                outOfRange = true;
+                break;
+            }
+        }
+        while(fast != null && fast.getNext() != null) {
+            slow = slow.getNext();
+            fast = fast.getNext();
+        }
+        if (!outOfRange) {
+            slow.setNext(slow.getNext().getNext());
+        } else {
+            head = slow.getNext();
+        }
+        return head;
+    }
 }

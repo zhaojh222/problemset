@@ -21,6 +21,13 @@ public class NodeOperatorTest {
         nodeOperator.outputNode(reverseNode);
     }
 
+    @Test
+    public void testRemoveNthEndNode() {
+        Node node = createNode();
+        Node result = nodeOperator.removeNthEndNode(node, 5);
+        nodeOperator.outputNode(result);
+    }
+
     private Node createNode() {
         Node node6 = new Node(6);
         Node node5 = new Node(5, node6);
