@@ -1,6 +1,8 @@
 package com.zjh.lc.problemset.others;
 
 import com.zjh.lc.problemset.common.Node;
+import com.zjh.lc.problemset.common.SingleEndStack;
+import com.zjh.lc.problemset.common.Stack;
 import org.junit.jupiter.api.Test;
 
 public class NodeOperatorTest {
@@ -26,6 +28,19 @@ public class NodeOperatorTest {
         Node node = createNode();
         Node result = nodeOperator.removeNthEndNode(node, 5);
         nodeOperator.outputNode(result);
+    }
+
+    @Test
+    public void testStack() {
+        Stack stack = new SingleEndStack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+
+        stack.pop();
+        stack.pop();
+        stack.browser();
     }
 
     private Node createNode() {
