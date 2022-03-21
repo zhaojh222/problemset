@@ -2,13 +2,13 @@ package com.zjh.lc.problemset.others;
 
 import com.zjh.lc.problemset.common.Node;
 
-public class NodeOperator {
+public class NodeOperator<T> {
 
     public Node swapNodeValues(Node node) {
         Node currentNode = node;
         Node nextNode = null;
         while (currentNode != null && (nextNode = currentNode.getNext())!= null) {
-            int tmp = currentNode.getValue();
+            T tmp = (T) currentNode.getValue();
             currentNode.setValue(nextNode.getValue());
             nextNode.setValue(tmp);
             currentNode = nextNode.getNext();

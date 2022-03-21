@@ -3,17 +3,17 @@ package com.zjh.lc.problemset.common;
 import lombok.Data;
 
 @Data
-public class Node {
+public class Node<T> {
 
-    public int value;
+    public T value;
     public Node next;
     public Node prev;
 
-    public Node(int value) {
+    public Node(T value) {
         this.value = value;
     }
 
-    public Node(int value, Node next) {
+    public Node(T value, Node next) {
         this.value = value;
         this.next = next;
     }

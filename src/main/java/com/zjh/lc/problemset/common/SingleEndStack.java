@@ -2,13 +2,13 @@ package com.zjh.lc.problemset.common;
 
 import com.zjh.lc.problemset.others.NodeOperator;
 
-public class SingleEndStack extends Stack{
+public class SingleEndStack<T> extends Stack<T>{
 
     private Node head;
     private NodeOperator nodeOperator = new NodeOperator();
 
     @Override
-    public void push(int data) {
+    public void push(T data) {
         Node node = new Node(data);
         if (head == null) {
             head = node;
@@ -19,11 +19,11 @@ public class SingleEndStack extends Stack{
     }
 
     @Override
-    public int pop() {
+    public T pop() {
         if (head == null) {
-            return -1;
+            return null;
         }
-        int data = head.value;
+        T data = (T) head.value;
         if (head.next != null) {
             head = head.next;
         } else {

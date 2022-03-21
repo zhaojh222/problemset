@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class NodeOperatorTest {
 
-    private NodeOperator nodeOperator = new NodeOperator();
+    private NodeOperator nodeOperator = new NodeOperator<Integer>();
 
     @Test
     void swapNodeValues() {
