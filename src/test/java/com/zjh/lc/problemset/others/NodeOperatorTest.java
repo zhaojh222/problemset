@@ -43,6 +43,14 @@ public class NodeOperatorTest {
         stack.browser();
     }
 
+    @Test
+    public void reverseKNode() {
+        Node node = createNode();
+        int k = 3;
+        Node result = nodeOperator.reverseKNode(node, k);
+        nodeOperator.outputNode(result);
+    }
+
     private Node createNode() {
         Node node6 = new Node(6);
         Node node5 = new Node(5, node6);
@@ -53,4 +61,5 @@ public class NodeOperatorTest {
 
         return node1;
     }
+
 }

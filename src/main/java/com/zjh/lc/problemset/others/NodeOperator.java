@@ -2,6 +2,9 @@ package com.zjh.lc.problemset.others;
 
 import com.zjh.lc.problemset.common.Node;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NodeOperator<T> {
 
     public Node swapNodeValues(Node node) {
@@ -19,8 +22,8 @@ public class NodeOperator<T> {
     public void outputNode(Node node) {
         Node pos = node;
         while(pos != null) {
-            System.out.println(pos.getValue());
-            pos = pos.getNext();
+            System.out.println(pos.value);
+            pos = pos.next;
         }
     }
 
@@ -29,9 +32,9 @@ public class NodeOperator<T> {
         Node head = node;
         Node pos = node;
         Node next = null;
-        while(pos != null && (next = pos.getNext())!=null) {
-            pos.setNext(next.getNext());
-            next.setNext(head);
+        while(pos != null && (next = pos.next)!=null) {
+            pos.next = next.next;
+            next.next = head;
             head = next;
         }
         return head;
@@ -60,5 +63,31 @@ public class NodeOperator<T> {
             head = slow.getNext();
         }
         return head;
+    }
+
+    /**
+     * For each K nodes, reverse them, if the left node count less then K, then ignore
+     * @param head
+     * @param k
+     */
+    public Node reverseKNode(Node head, int k) {
+        Node dummy = new Node(0,head);      //Create a dummy head;
+        Node pre = dummy, cur = dummy;
+        while (cur.next != null) {
+            for (int i = 0; i < k && cur != null; ++i) {
+                cur = cur.next;
+            }
+            if (cur == null) {
+                return dummy.next;          //If the left block node count less then K, don't need to process
+            }
+            Node nextBlock = cur.next;
+            cur.next = null;
+            Node start = pre.next;          //start is the K block need to be reversed
+            pre.next = reverseNode(start);  //after reversed, start it should be the K block's tail
+            start.next = nextBlock;         //So here, connect the reversed K block to the next
+            pre = start;
+            cur = pre;
+        }
+        return dummy.next;
     }
 }
