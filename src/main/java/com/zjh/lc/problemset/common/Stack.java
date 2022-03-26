@@ -9,4 +9,6 @@ public abstract class Stack<T> {
     public abstract T pop();
 
     public abstract void browser();
+
+    public abstract boolean isEmpty();
 }

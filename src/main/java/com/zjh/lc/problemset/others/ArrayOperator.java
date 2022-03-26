@@ -21,4 +21,74 @@ public class ArrayOperator {
         }
         return count;
     }
+
+    public int[] rotateSortedArray(int[] nums, int index) {
+        int len = nums.length;
+        int[] results = new int[len];
+        for(int i=0;i<len;i++) {
+            results[i] = nums[(i + index) % len];
+        }
+        return results;
+    }
+
+    public int binarySearch(int[] nums, int value) {
+        int len = nums.length;
+        int start = 0, end = len;
+        int result = -1;
+
+        while(start <= end) {
+            int mid = (start + end) / 2;
+            if (value < nums[mid]) {
+                end = mid - 1;
+            } else if (value > nums[mid]) {
+                start = mid + 1;
+            } else {
+                result = mid;
+                break;
+            }
+        }
+        return result;
+    }
+
+    public int binarySearchFirst(int[] nums, int value) {
+        int len = nums.length;
+        int start = 0, end = len;
+
+        while(start <= end) {
+            int mid = (start + end) / 2;
+            if (value < nums[mid]) {
+                end = mid - 1;
+            } else if (value > nums[mid]) {
+                start = mid + 1;
+            } else {
+                for (int j = mid; j > 0; j--) {
+                    if (nums[j] < value) {
+                        return j + 1;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+
+    public int binarySearchLast(int[] nums, int value) {
+        int len = nums.length;
+        int start = 0, end = len;
+
+        while(start <= end) {
+            int mid = (start + end) / 2;
+            if (value < nums[mid]) {
+                end = mid - 1;
+            } else if (value > nums[mid]) {
+                start = mid + 1;
+            } else {
+                for (int j = mid; j < len; j++) {
+                    if (nums[j] > value) {
+                        return j - 1;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
 }

@@ -36,4 +36,9 @@ public class SingleEndStack<T> extends Stack<T>{
     public void browser() {
         nodeOperator.outputNode(head);
     }
+
+    @Override
+    public boolean isEmpty() {
+        return head == null;
+    }
 }

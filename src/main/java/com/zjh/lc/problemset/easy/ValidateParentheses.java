@@ -6,9 +6,10 @@ import org.springframework.util.StringUtils;
 
 public class ValidateParentheses {
 
-    private Stack stack = new SingleEndStack<Character>();
+    private Stack stack;
 
     public boolean validate(String input) {
+        stack = new SingleEndStack<Character>();
         if (StringUtils.isEmpty(input)) {
             return false;
         }
@@ -28,5 +29,26 @@ public class ValidateParentheses {
             }
         }
         return true;
+    }
+
+    public int longestValidParentheses(String input) {
+        stack = new SingleEndStack();
+        if(StringUtils.isEmpty(input)) {
+            return 0;
+        }
+        int count = 0;
+        char[] chars = input.toCharArray();
+        for(char ch:chars) {
+            if(ch == '(') {
+                stack.push(ch);
+            } else if(ch == ')') {
+                if (stack.isEmpty()) {
+                    continue;
+                }
+                stack.pop();
+                count += 2;
+            }
+        }
+        return count;
     }
 }
