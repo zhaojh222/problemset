@@ -91,4 +91,26 @@ public class ArrayOperator {
         }
         return -1;
     }
+
+    public int searchInsertPosition(int[] nums, int value) {
+        int len = nums.length;
+        int start = 0, end = len;
+        int result = -1;
+
+        while(start <= end) {
+            int mid = (start + end) / 2;
+            if (value < nums[mid]) {
+                end = mid - 1;
+            } else if (value > nums[mid]) {
+                start = mid + 1;
+            } else {
+                result = mid;
+                break;
+            }
+        }
+        if (start > end) {
+            
+        }
+        return result;
+    }
 }
