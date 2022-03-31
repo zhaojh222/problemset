@@ -59,4 +59,12 @@ public class ArrayOperatorTest {
         int result = instance.binarySearchLast(nums, value);
         assertEquals(5, result);
     }
+
+    @Test
+    void searchInsertPosition() {
+        int[] nums = new int[]{10,20,30,40,50,60,70,80};
+        int value = 99;
+        int result = instance.searchInsertPosition(nums, value);
+        assertEquals(8, result);
+    }
 }

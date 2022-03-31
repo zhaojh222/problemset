@@ -33,7 +33,7 @@ public class ArrayOperator {
 
     public int binarySearch(int[] nums, int value) {
         int len = nums.length;
-        int start = 0, end = len;
+        int start = 0, end = len - 1;
         int result = -1;
 
         while(start <= end) {
@@ -52,7 +52,7 @@ public class ArrayOperator {
 
     public int binarySearchFirst(int[] nums, int value) {
         int len = nums.length;
-        int start = 0, end = len;
+        int start = 0, end = len - 1;
 
         while(start <= end) {
             int mid = (start + end) / 2;
@@ -73,7 +73,7 @@ public class ArrayOperator {
 
     public int binarySearchLast(int[] nums, int value) {
         int len = nums.length;
-        int start = 0, end = len;
+        int start = 0, end = len - 1;
 
         while(start <= end) {
             int mid = (start + end) / 2;
@@ -94,7 +94,7 @@ public class ArrayOperator {
 
     public int searchInsertPosition(int[] nums, int value) {
         int len = nums.length;
-        int start = 0, end = len;
+        int start = 0, end = len - 1;
         int result = -1;
 
         while(start <= end) {
@@ -109,7 +109,7 @@ public class ArrayOperator {
             }
         }
         if (start > end) {
-            
+            result = start;
         }
         return result;
     }

@@ -19,4 +19,15 @@ public class StringOperatorTest {
         result = instance.indexOf(hayStack,needle);
         assertEquals(-1, result);
     }
+
+    @Test
+    public void countAndSay() {
+        int n = 2;
+        String result = instance.countAndSay(n);
+        assertEquals("11", result);
+
+        n = 5;
+        result = instance.countAndSay(n);
+        assertEquals("111221", result);
+    }
 }
