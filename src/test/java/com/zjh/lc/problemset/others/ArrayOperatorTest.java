@@ -67,4 +67,11 @@ public class ArrayOperatorTest {
         int result = instance.searchInsertPosition(nums, value);
         assertEquals(8, result);
     }
+
+    @Test
+    void findMissingPositive() {
+        int[] nums = new int[]{3,11,2,8,-1,-10,7};
+        int result = instance.findMissingPositive(nums);
+        assertEquals(2, result);
+    }
 }

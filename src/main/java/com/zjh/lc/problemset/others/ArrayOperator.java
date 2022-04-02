@@ -113,4 +113,18 @@ public class ArrayOperator {
         }
         return result;
     }
+
+    public int findMissingPositive(int[] nums) {
+        if(nums == null || nums.length == 0) {
+            return -1;
+        }
+        int result = 0;
+        for (int i=0;i< nums.length;i++) {
+            int min = nums[result];
+            if(nums[i] > 0 && nums[i] < min) {
+                result = i;
+            }
+        }
+        return result;
+    }
 }
