@@ -22,18 +22,18 @@ public class Permutations {
         return permutes;
     }
 
-    private void dfsp(List<Integer> pList, List<Integer> subList) {
+    private void dfsp(List<Integer> permutations, List<Integer> subList) {
         if (subList.size() > 1) {
             for(int num : subList) {
-                pList.add(num);
+                permutations.add(num);
                 List<Integer> newSubList = makeExcludedSubList(subList, num);
-                dfsp(pList, newSubList);
-                pList.remove(pList.size() - 1);
+                dfsp(permutations, newSubList);
+                permutations.remove(permutations.size() - 1);
             }
         } else {
-            pList.add(subList.get(0));
-            permutes.add(ImmutableList.copyOf(pList));
-            pList.remove(pList.size() -1);
+            permutations.add(subList.get(0));
+            permutes.add(ImmutableList.copyOf(permutations));
+            permutations.remove(permutations.size() -1);
         }
     }
 
