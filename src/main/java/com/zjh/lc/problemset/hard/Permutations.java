@@ -38,8 +38,14 @@ public class Permutations {
     }
 
     private List<Integer> makeExcludedSubList(List<Integer> data, int excludedNum) {
-        List<Integer> result = data.stream().filter(num -> num!= excludedNum)
-                .collect(Collectors.toList());
+        List<Integer> result = new ArrayList<>();
+        result.addAll(data);
+        for (int num : data) {
+            if (num == excludedNum) {
+                result.remove(Integer.valueOf(num));
+                break;
+            }
+        }
         return result;
     }
 }
