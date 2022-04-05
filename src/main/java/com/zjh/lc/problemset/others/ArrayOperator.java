@@ -1,12 +1,6 @@
 package com.zjh.lc.problemset.others;
 
-import com.google.common.primitives.Ints;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ArrayOperator {
 
@@ -134,6 +128,56 @@ public class ArrayOperator {
             }
         }
         return result;
+    }
+
+    public int countSubArray(List<Integer> numbers, int target) {
+        int sum = 0;
+        int count = 0;
+        int len = numbers.size();
+        for(int i=0;i<len;i++){
+            if(numbers.get(i) <= target) {
+                count ++;
+            }
+            sum = numbers.get(i);
+            for(int j=i+1;j<len;j++){
+                sum += numbers.get(j);
+                if(sum <= target){
+                    count ++;
+                }
+            }
+        }
+        return count;
+    }
+
+    /**
+     * 1,2,3
+     * 4,5,6
+     * 7,8,9
+     * rotated to
+     * 7,4,1
+     * 8,5,2
+     * 9,6,3
+     * @param nums
+     * @return
+     */
+    public int[][] rotateImage(int[][] nums) {
+        int length = nums.length;
+        int[][] results = new int[length][length];
+        for(int i=0;i<nums.length;i++) {
+            for (int j = 0; j < nums.length; j++) {
+                results[i][j] = nums[length-1-j][i];
+            }
+        }
+        return results;
+    }
+
+    public void outputMatrix(int[][] nums) {
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<nums.length;j++){
+                System.out.printf("%d\t",nums[i][j]);
+            }
+            System.out.println();
+        }
     }
 
 }

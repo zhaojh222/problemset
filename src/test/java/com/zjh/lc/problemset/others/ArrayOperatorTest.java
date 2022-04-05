@@ -1,10 +1,12 @@
 package com.zjh.lc.problemset.others;
 
+import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class ArrayOperatorTest {
 
@@ -73,5 +75,20 @@ public class ArrayOperatorTest {
         int[] nums = new int[]{3,11,2,8,-1,-10,7};
         int result = instance.findMissingPositive(nums);
         assertEquals(2, result);
+    }
+
+    @Test
+    void countSubArray() {
+        List<Integer> numbers = ImmutableList.of(2,3,4,6,10);
+        int target = 6;
+        int result = instance.countSubArray(numbers,target);
+        assertEquals(3, result);
+    }
+
+    @Test
+    void rotateImage() {
+        int[][] nums = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};
+        int[][] results = instance.rotateImage(nums);
+        instance.outputMatrix(results);
     }
 }

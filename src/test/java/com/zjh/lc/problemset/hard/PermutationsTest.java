@@ -12,7 +12,7 @@ class PermutationsTest {
 
     @Test
     void permutation() {
-        int[] nums = {1,1,2};
+        int[] nums = {1,2,3,4};
         List<List<Integer>> results = instance.permutation(nums);
         results.forEach(list -> {
             list.forEach(System.out::print);
