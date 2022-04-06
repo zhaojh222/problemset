@@ -20,4 +20,12 @@ public class NumberOperatorTest {
         result = instance.divideNums(dividend, divisor);
         assertEquals(-2, result);
     }
+
+    @Test
+    void myPow() {
+        double x = 2.1;
+        int y = 3;
+        double result = instance.myPow(x, y);
+        assertEquals(9.261, result, 0.001);
+    }
 }

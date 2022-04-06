@@ -19,4 +19,17 @@ public class NumberOperator {
         }
         return isNegative ? 0 - result : result;
     }
+
+    public double myPow(double x, int y) {
+        return y > 0 ? pow(x, y) : 1.0 / pow(x, -y);
+    }
+
+    private double pow(double x, int y) {
+        if (y == 0) {
+            return 1.0;
+        } else {
+            double value = pow(x, y >> 1);
+            return (y & 1) == 0 ? value * value : value * value * x;
+        }
+    }
 }
