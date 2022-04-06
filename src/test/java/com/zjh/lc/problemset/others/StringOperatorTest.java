@@ -2,6 +2,8 @@ package com.zjh.lc.problemset.others;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringOperatorTest {
@@ -29,5 +31,17 @@ public class StringOperatorTest {
         n = 5;
         result = instance.countAndSay(n);
         assertEquals("111221", result);
+    }
+
+    @Test
+    void groupAnagrams() {
+        String[] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
+        List<List<String>> results = instance.groupAnagrams(strs);
+        results.forEach(list -> {
+            list.forEach(element -> {
+                System.out.printf("%s\t", element);
+            });
+            System.out.println();
+        });
     }
 }

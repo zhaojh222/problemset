@@ -3,9 +3,12 @@ package com.zjh.lc.problemset.others;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StringOperator {
 
@@ -61,6 +64,26 @@ public class StringOperator {
             kvPairs.stream().forEach(kvPair -> sb.append(kvPair.count).append(kvPair.num));
             return sb.toString();
         }
+    }
+
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String,List<String>> map = new HashMap<>();
+        for(String str: strs) {
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String sortedStr = String.valueOf(chars);
+            if (!map.containsKey(sortedStr)) {
+                List<String> list = new ArrayList(){{
+                    add(str);
+                }};
+                map.put(sortedStr, list);
+            } else {
+                List<String> list = map.get(sortedStr);
+                list.add(str);
+                map.put(sortedStr, list);
+            }
+        }
+        return map.values().stream().collect(Collectors.toList());
     }
 
     class KVPair {
