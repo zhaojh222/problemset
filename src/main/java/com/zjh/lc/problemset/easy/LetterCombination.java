@@ -22,13 +22,13 @@ public class LetterCombination {
 
     private void combine(String value,List<String> subList) {
         int size = subList.size();
-        String nums = subList.get(0);
+        String chars = subList.get(0);
         if (size > 1) {
-            for (char c : nums.toCharArray()) {
+            for (char c : chars.toCharArray()) {
                 combine(value + c, subList.subList(startIndex, size));
             }
         } else {
-            for (char c : nums.toCharArray()) {
+            for (char c : chars.toCharArray()) {
                 String finalValue = value + c;
                 results.add(finalValue);
             }
