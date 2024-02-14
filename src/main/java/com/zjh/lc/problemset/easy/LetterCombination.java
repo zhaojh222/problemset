@@ -14,8 +14,8 @@ public class LetterCombination {
     private int startIndex = 1;
 
     public LetterCombination() {
-        //"1" - "9"
-        letters = ImmutableList.of("","abc","def","ghi","jkl","mno",
+        //"0 - "9"
+        letters = ImmutableList.of("", "","abc","def","ghi","jkl","mno",
             "pqrs","tuv","wxyz");
         results = new ArrayList<>();
     }

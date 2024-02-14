@@ -11,7 +11,7 @@ public class GenerateParenthesesTest {
     @Test
     public void generateParentheses() {
         int n = 3;
-        List<String> result = instance.generateParentheses(5);
+        List<String> result = instance.generateParentheses(n);
         result.stream().forEach(System.out::println);
     }
 }
